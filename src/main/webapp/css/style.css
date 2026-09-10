@@ -1,0 +1,131 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --primary-hover-gradient: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+    --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    --card-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    --card-hover-shadow: 0 25px 30px -5px rgba(79, 70, 229, 0.2), 0 15px 15px -5px rgba(124, 58, 237, 0.15);
+    --glow-color: rgba(99, 102, 241, 0.5);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    background: var(--bg-gradient) !important;
+    min-height: 100vh;
+    color: #1e293b;
+}
+
+/* Glassmorphism Card Style */
+.card, .custom-card {
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(12px);
+    border-radius: 20px !important;
+    box-shadow: var(--card-shadow) !important;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--card-hover-shadow) !important;
+}
+
+/* Navbar Custom Styling */
+.navbar {
+    background: rgba(15, 23, 42, 0.92) !important;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand-logo {
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover .brand-logo {
+    filter: drop-shadow(0 0 8px rgba(192, 132, 252, 0.6));
+}
+
+/* Modern Gradient Buttons with Glowing Effect */
+.btn-primary {
+    background: var(--primary-gradient) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2px;
+    box-shadow: 0 4px 14px 0 var(--glow-color) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover-gradient) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(99, 102, 241, 0.7) !important;
+}
+
+.btn-outline-primary, .btn-outline-secondary {
+    border-radius: 12px !important;
+    border-width: 2px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-outline-secondary:hover {
+    box-shadow: 0 4px 15px rgba(100, 116, 139, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Form Input Controls */
+.form-control {
+    border-radius: 12px !important;
+    padding: 0.75rem 1rem !important;
+    border: 1.5px solid #e2e8f0 !important;
+    background: rgba(248, 250, 252, 0.8) !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-control:focus {
+    background: #ffffff !important;
+    border-color: #6366f1 !important;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15) !important;
+}
+
+.input-group-text {
+    border-radius: 12px 0 0 12px !important;
+    border: 1.5px solid #e2e8f0 !important;
+    border-right: none !important;
+    background: rgba(248, 250, 252, 0.8) !important;
+}
+
+.input-group .form-control {
+    border-radius: 0 12px 12px 0 !important;
+}
+
+/* Animated Hover Links */
+a.text-primary, .nav-link {
+    transition: all 0.3s ease;
+}
+
+a.text-primary:hover {
+    color: #4338ca !important;
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+}
+
+/* Like Button Glow */
+.btn-outline-danger {
+    border-radius: 20px !important;
+    border-width: 1.5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-outline-danger:hover {
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4) !important;
+    transform: scale(1.05);
+}

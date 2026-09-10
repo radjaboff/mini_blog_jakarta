@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
+             version="3.2">
+  <persistence-unit name="mini_blog">
+
+
+
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <class>dasturlash.uz.mini_blog.entity.AuthUser</class>
+    <class>dasturlash.uz.mini_blog.entity.Post</class>
+    <class>dasturlash.uz.mini_blog.entity.PostView</class>
+    <class>dasturlash.uz.mini_blog.entity.PostLike</class>
+    <properties>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost/mini_blog"/>
+      <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+      <property name="jakarta.persistence.jdbc.password" value="YOUR_PASSWORD_HERE"/>
+      <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+    </properties>
+
+  </persistence-unit>
+</persistence>
